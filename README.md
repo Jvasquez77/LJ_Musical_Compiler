@@ -210,6 +210,17 @@ Este compilador implementa las fases clásicas de compilación:
 
 El diseño se basa en el patrón Visitor para recorrer y procesar el AST.
 
+## Reproductor Musical
+
+El compilador incluye una funcionalidad adicional de reproducción musical, que permite al usuario visualizar la composición realizada en una partitura en formato PDF y escucharla en audio con formato .OGG. Esta funcionalidad utiliza herramientas externas como:
+
+- **abcm2ps**: Convierte el archivo ABC a formato PostScript
+- **ps2pdf**: Convierte el archivo PostScript (GRAFICO VECTORIAL) a PDF
+- **abc2midi**: Adapta el archivo ABC generado interfaz MIDI
+- **timidity**: Reproduce el archivo ABC-MIDI generado
+
+Esta característica proporciona una experiencia completa al usuario, permitiéndole crear composiciones musicales a través del compilador y visualizarlas en una partitura profesional y escucharlas inmediatamente.
+
 Diseñado Por:
 
 Lorena Fernandez V-28.440.154
