@@ -3,6 +3,7 @@
     #include <string>
     #include <vector>
     #include <cctype>
+    #include <cstring>
     #include "declaration.hpp"
     #include "expression.hpp"
     #include "statement.hpp"
