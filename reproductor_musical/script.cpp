@@ -29,10 +29,9 @@ int main() {
         return 1;
     }
     
-    // Reproducir el archivo MIDI
+    // Reproducir el archivo MIDI 
     std::string cmd2 = "nohup timidity " + midi_file + " > /dev/null 2>&1 &";
     std::system(cmd2.c_str());
-
 
 
     std::cout << "Conversión completada.\n";
