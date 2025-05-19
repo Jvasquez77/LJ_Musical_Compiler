@@ -219,6 +219,13 @@ El compilador incluye una funcionalidad adicional de reproducción musical, que 
 - **abc2midi**: Adapta el archivo ABC generado interfaz MIDI
 - **timidity**: Reproduce el archivo ABC-MIDI generado
 
+Porfavor descarga las siguientes bibliotecas para poder usar el script:
+
+```
+sudo apt update
+sudo apt install abcmidi timidity abcm2ps ghostscript
+```
+
 Esta característica proporciona una experiencia completa al usuario, permitiéndole crear composiciones musicales a través del compilador y visualizarlas en una partitura profesional y escucharlas inmediatamente.
 
 Diseñado Por:
