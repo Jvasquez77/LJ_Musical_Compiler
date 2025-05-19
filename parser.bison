@@ -31,8 +31,8 @@
                 return ultimo - '0';
             }
         }
-        // Si no se encuentra una octava válida, devolver un valor por defecto
-        return 4; // Octava 4 por defecto
+        yyerror("Error interno: Nota sin octava válida detectada");
+        return -1; // 
     }
 
     // Función auxiliar para extraer solo el nombre de la nota sin la octava
