@@ -7,6 +7,7 @@ int main() {
     std::string midi_file = "output.mid";
     std::string ps_file = "output.ps";
     std::string pdf_file = "output.pdf";
+    std::string ogg_file = "output.ogg";
 
     // ABC EN PROTOCOLOS MIDI
     std::string cmd1 = "abc2midi " + abc_file + " -o " + midi_file;
@@ -15,7 +16,7 @@ int main() {
         return 1;
     }
 
-        // Convertir ABC a PostScript
+    // Convertir ABC a PostScript
     std::string cmd3 = "abcm2ps " + abc_file + " -O " + ps_file;
     if (std::system(cmd3.c_str()) != 0) {
         std::cerr << "Error al convertir ABC a PostScript\n";
@@ -29,10 +30,12 @@ int main() {
         return 1;
     }
     
-    // Reproducir el archivo MIDI 
-    std::string cmd2 = "nohup timidity " + midi_file + " > /dev/null 2>&1 &";
-    std::system(cmd2.c_str());
-
+    // Convertir MIDI a OGG usando timidity
+    std::string cmd2 = "timidity " + midi_file + " -Ow -o " + ogg_file;  //-0w salida en formato ogg y -o nombre del archivo de salida
+    if (std::system(cmd2.c_str()) != 0) {
+        std::cerr << "Error al convertir MIDI a OGG\n";
+        return 1;
+    }
 
     std::cout << "Conversión completada.\n";
     return 0;
