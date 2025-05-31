@@ -141,6 +141,34 @@ Implementado a través del método `to_abc()` en cada clase del AST. Este proces
 3. Ejecutar el compilador: `./compilador_musical archivo.mus`
 4. Se generará un archivo de salida `archivo.abc`
 
+### Uso del Makefile en la carpeta lj_to_abc
+
+La carpeta `lj_to_abc` contiene un Makefile especializado que automatiza todo el proceso de compilación, traducción y generación de archivos musicales. Con un solo comando, puedes:
+
+1. Compilar el código fuente si es necesario
+2. Traducir el archivo musical `.mus` a formato ABC
+3. Generar automáticamente:
+   - Un archivo PDF con la partitura musical
+   - Un archivo OGG para reproducción de audio
+   - Un archivo MIDI intermedio
+
+Para usar esta funcionalidad:
+
+1. Coloca tu archivo musical con extensión `.mus` en la carpeta `lj_to_abc` con el nombre `melodia.mus`
+2. Desde la carpeta `lj_to_abc`, ejecuta:
+   ```bash
+   make
+   ```
+3. El proceso generará automáticamente:
+   - `output.pdf`: La partitura musical en formato PDF
+   - `output.ogg`: El archivo de audio en formato OGG
+   - `output.mid`: El archivo MIDI intermedio
+
+Para limpiar todos los archivos generados:
+```bash
+make clean
+```
+
 ## Estructura de Archivos
 
 - **Analizadores**:
